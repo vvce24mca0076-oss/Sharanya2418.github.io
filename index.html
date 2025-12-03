@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sharanya S Urs — Portfolio</title>
+
+  <style>
+    :root{
+      --accent:#2f49ff;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --bg:#f3f6fb;
+      --chip-bg:#f1f5ff;
+      --maxw:980px;
+      --radius:14px;
+      --tag-border:rgba(47,73,255,0.35);
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      margin:0;
+      background:linear-gradient(180deg,var(--bg),#ffffff 60%);
+      color:#111827;
+      line-height:1.5;
+    }
+
+    .wrap{
+      width:92%;
+      max-width:var(--maxw);
+      margin:28px auto 60px;
+    }
+
+    /* --------------------
+       HERO SECTION
+    ---------------------- */
+    .hero{
+      display:flex;
+      gap:22px;
+      align-items:center;
+      background:var(--card);
+      padding:20px;
+      border-radius:var(--radius);
+      box-shadow:0 6px 22px rgba(17,24,39,0.06);
+    }
+    .photo {
+      width:120px;
+      height:120px;
+      flex:0 0 120px;
+      border-radius:16px;
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#fafafa;
+      border:1px solid rgba(15,23,42,0.04);
+    }
+    .photo img{ max-width:100%; max-height:100%; display:block; transition:0.25s; }
+
+    .rotate-90 img{ transform: rotate(90deg); }
+
+    .hero-info h1{
+      margin:0;
+      font-size:22px;
+      letter-spacing:0.2px;
+      font-weight:700;
+    }
+    .meta{
+      margin-top:6px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .links{
+      margin-top:12px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-block;
+      padding:8px 12px;
+      border-radius:999px;
+      background:var(--chip-bg);
+      color:var(--accent);
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+      border:1px solid rgba(47,73,255,0.06);
+    }
+
+    /* --------------------
+       LAYOUT GRID
+    ---------------------- */
+    .grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:18px;
+      margin-top:18px;
+    }
+    @media(min-width:880px){
+      .grid{ grid-template-columns: 1fr 360px; }
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:14px;
+      padding:20px;
+      box-shadow:0 6px 18px rgba(17,24,39,0.04);
+    }
+
+    h2{ margin:0 0 12px; font-size:18px; }
+
+    .muted{ color:var(--muted); font-size:14px; }
+    .section-title{ display:flex; justify-content:space-between; align-items:center; }
+
+    /* --------------------
+       PROJECT TAG BUTTONS
+    ---------------------- */
+    .tags{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+    .tag{
+      padding:6px 12px;
+      border-radius:10px;
+      border:1px solid var(--tag-border);
+      background:rgba(255,255,255,0.4);
+      font-size:13px;
+      font-weight:600;
+      color:#2f49ff;
+      backdrop-filter:blur(3px);
+    }
+
+    /* --------------------
+       SKILLS
+    ---------------------- */
+    .chips{ display:flex; flex-wrap:wrap; gap:10px; }
+    .chip{
+      padding:8px 12px;
+      border-radius:12px;
+      background:var(--chip-bg);
+      border:1px solid rgba(47,73,255,0.06);
+      font-weight:600;
+      font-size:14px;
+    }
+
+    /* --------------------
+       CONTACT
+    ---------------------- */
+    .contact-list p{ margin:8px 0; font-size:15px; }
+    .contact-list a{ color:var(--accent); font-weight:600; }
+
+    .resume-btn{
+      display:inline-block;
+      padding:10px 14px;
+      background:var(--accent);
+      color:white;
+      border-radius:10px;
+      text-decoration:none;
+      margin-top:12px;
+      font-weight:700;
+    }
+
+    .two-col{ display:flex; gap:18px; flex-wrap:wrap; }
+    .two-col > div{ flex:1; }
+
+    footer{
+      text-align:center;
+      margin-top:22px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="photo" id="photo-wrap">
+      <img id="profile-photo" src="assets/SharanyaPhoto.jpg" alt="Sharanya S Urs">
+    </div>
+
+    <div class="hero-info">
+      <h1>Sharanya S Urs</h1>
+      <div class="meta">MCA Student · Aspiring Software Developer</div>
+      <div class="meta">Mysuru</div>
+
+      <div class="links">
+        <a class="btn" href="http://www.linkedin.com/in/sharanyasurs" target="_blank">View Profile</a>
+        <a class="btn" href="https://github.com/Sharanya2418" target="_blank">GitHub</a>
+        <a class="resume-btn" href="Sharanya_S_Urs_Resume.pdf" target="_blank" download>Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRID -->
+  <div class="grid">
+
+    <!-- LEFT COLUMN -->
+    <main>
+
+      <!-- ABOUT -->
+      <section class="card">
+        <h2>About</h2>
+        <p class="muted">
+          I am an MCA student with strong foundations in programming and hands-on experience in
+          computer vision, deep learning, and full-stack web development. I enjoy converting ideas 
+          into working systems and continuously improving my technical abilities.
+        </p>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="card" style="margin-top:12px">
+        <h2>Projects & Internship</h2>
+
+        <!-- Project 1 -->
+        <article class="project">
+          <h3>Eye Movement-Based Mouse Cursor Control</h3>
+          <p class="muted"><strong>Hands-free cursor control using eye tracking.</strong></p>
+          <p>
+            Built a system that tracks eye landmarks and maps them to screen coordinates.
+            Supports blink detection, smoothing, and calibration for different camera setups.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">MediaPipe</span>
+            <span class="tag">PyAutoGUI</span>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project">
+          <h3>Photography Portfolio Website</h3>
+          <p class="muted"><strong>A responsive gallery website for photographers.</strong></p>
+          <p>
+            Designed a multi-page portfolio with Home, Gallery, About, and Contact pages.
+            Focused on clean UI, mobile responsiveness, smooth navigation, and visual appeal.
+          </p>
+
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project">
+          <h3>Deep Learning (Image Processing) using CNN</h3>
+          <p class="muted"><strong>CNN-based model for classification & detection.</strong></p>
+          <p>
+            Trained convolutional models using augmented datasets and tuning strategies such as dropout,
+            learning-rate scheduling, and batch normalization. Visualized performance using metrics and heatmaps.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">CNN</span>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project">
+          <h3>Front-end Development (React.js) — Internship</h3>
+          <p class="muted"><strong>Reusable components · Hooks · API Integration</strong></p>
+          <p>
+            Built reusable React components, implemented responsive layouts, worked with state 
+            management using hooks, and collaborated using Git-based workflows during internship.
+          </p>
+
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">CSS</span>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- EDUCATION -->
+      <section class="card" style="margin-top:12px">
+        <h2>Education</h2>
+
+        <p><strong>MCA</strong> — Vidyavardhaka College of Engineering (VTU), Mysuru  
+        <br><span class="muted">2025–Present · CGPA: 8.75</span></p>
+
+        <p><strong>BCA</strong> — Seshadripuram Degree College (UOM), Mysuru  
+        <br><span class="muted">2024 · CGPA: 9.35</span></p>
+
+        <p><strong>PUC</strong> — Seshadripuram PU College  
+        <br><span class="muted">2021 · 83%</span></p>
+
+        <p><strong>SSLC</strong> — Nirmala High School (KSEEB)  
+        <br><span class="muted">2019 · 77.76%</span></p>
+      </section>
+
+      <!-- ACHIEVEMENTS -->
+      <section class="card" style="margin-top:12px">
+        <h2>Achievements</h2>
+        <ul class="muted">
+          <li>Magic Bus – Connect with Work Programme (2025)</li>
+          <li>Completed Basic HTML Course – Coursera (2025)</li>
+          <li>Certifications in Deep Learning and Web Development (2024)</li>
+          <li>Volunteer – Blood Donation Camp (2024)</li>
+        </ul>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="card" style="margin-top:12px">
+        <h2>Skills</h2>
+        <div class="chips">
+          <span class="chip">Java</span>
+          <span class="chip">DBMS</span>
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">React</span>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- RIGHT COLUMN -->
+    <aside>
+
+      <!-- CONTACT -->
+      <section class="card contact-list">
+        <h2>Contact</h2>
+        <p><strong>Email:</strong> <a href="mailto:sharanyasurs@gmail.com">sharanyasurs@gmail.com</a></p>
+        <p><strong>Phone:</strong> +91-8073165975</p>
+        <p><strong>Location:</strong> Gokulam, Mysuru</p>
+        <p><strong>LinkedIn:</strong> <a href="http://www.linkedin.com/in/sharanyasurs" target="_blank">View Profile</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Sharanya2418" target="_blank">@Sharanya2418</a></p>
+
+        <a class="resume-btn" href="Sharanya_S_Urs_Resume.pdf" target="_blank" download>Download Resume</a>
+      </section>
+
+      <!-- LANGUAGES & HOBBIES -->
+      <section class="card" style="margin-top:12px">
+        <h2>Languages & Hobbies</h2>
+
+        <div class="two-col">
+          <div>
+            <h3 style="font-size:14px;margin:0 0 6px">Languages</h3>
+            <p class="muted">Kannada · English · Hindi</p>
+          </div>
+
+          <div>
+            <h3 style="font-size:14px;margin:0 0 6px">Hobbies</h3>
+            <p class="muted">Drawing · Badminton · Music</p>
+          </div>
+        </div>
+      </section>
+
+    </aside>
+
+  </div>
+
+  <footer>
+    Built by Sharanya S Urs — MCA Student • Updated: 2025
+  </footer>
+
+</div>
+
+<!-- Auto-rotate script -->
+<script>
+(function(){
+  const img = document.getElementById('profile-photo');
+  const wrap = document.getElementById('photo-wrap');
+
+  img.addEventListener('error', ()=>{
+    img.src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240"><rect width="100%" height="100%" fill="%23f3f6fb"/><text x="50%" y="50%" font-size="16" fill="%236b7280" text-anchor="middle" dominant-baseline="middle">Upload assets/photo.jpg</text></svg>';
+  });
+
+  img.addEventListener('load', ()=>{
+    const w = img.naturalWidth, h = img.naturalHeight;
+    if(w > h){ wrap.classList.add('rotate-90'); }
+  });
+
+  if(img.complete && img.naturalWidth){ img.dispatchEvent(new Event('load')); }
+})();
+</script>
+
+</body>
+</html>
